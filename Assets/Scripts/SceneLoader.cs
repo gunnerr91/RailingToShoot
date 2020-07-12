@@ -1,14 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MusicPlayer : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     void Start()
     {
         Invoke("LoadFirstLevel", 2f);
@@ -18,5 +14,4 @@ public class MusicPlayer : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
 }

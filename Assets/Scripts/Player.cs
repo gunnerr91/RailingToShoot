@@ -32,6 +32,16 @@ public class Player : MonoBehaviour
         ProcessPlayerRotation();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("Player collided with something");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Player triggered by" + other.gameObject);
+    }
+
     private void ProcessPlayerRotation()
     {
 
