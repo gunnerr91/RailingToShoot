@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] float speed = 20f;
     [SerializeField] float xRange = 8f;
     [SerializeField] float yRange = 8f;
@@ -19,6 +20,8 @@ public class Player : MonoBehaviour
 
     float horizontalThrow, verticalThrow;
 
+    bool isPlayerDead = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,18 +31,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPlayerDead) return;
         ProcessPlayerPosition();
         ProcessPlayerRotation();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void RemoveControl()
     {
-        print("Player collided with something");
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        print("Player triggered by" + other.gameObject);
+        isPlayerDead = true;
+        print("The red baron has fallen!");
     }
 
     private void ProcessPlayerRotation()
