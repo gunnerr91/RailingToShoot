@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1098641628654079003}
   - component: {fileID: 1100661029417973233}
   - component: {fileID: 1108336479343471467}
-  - component: {fileID: 2699163003943188007}
+  - component: {fileID: 45874164}
   m_Layer: 0
   m_Name: Booster_Enemy
   m_TagString: Untagged
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095559987931234731}
-  m_LocalRotation: {x: -0.31969535, y: -0.64808196, z: -0.5426037, w: 0.42821258}
+  m_LocalRotation: {x: -0.319697, y: -0.6480812, z: -0.542601, w: 0.4282158}
   m_LocalPosition: {x: 199.74, y: 41.97, z: 384.97}
-  m_LocalScale: {x: 18.55, y: 28.1, z: 18.5}
+  m_LocalScale: {x: 18.550001, y: 28.1, z: 18.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,16 +80,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2699163003943188007
-BoxCollider:
+--- !u!114 &45874164
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095559987931234731}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6627088, y: 0.48463202, z: 0.1403248}
-  m_Center: {x: 0.0000009536743, y: 4.3715032e-16, z: -0.0000000037252907}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2470f3f6c0a34504ab3ea3869e0d252b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

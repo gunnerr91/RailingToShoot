@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1004356281275016746}
   - component: {fileID: 979307271034965754}
   - component: {fileID: 987419882881360066}
-  - component: {fileID: 6435509667025832080}
+  - component: {fileID: 266601435}
   m_Layer: 0
   m_Name: Roamer_Enemy
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001636128767905574}
-  m_LocalRotation: {x: -0, y: -0.051901426, z: -0, w: 0.9986522}
+  m_LocalRotation: {x: 0, y: -0.051900197, z: 0, w: 0.99865234}
   m_LocalPosition: {x: 112.44, y: 41.9, z: 314.11}
   m_LocalScale: {x: 18.55, y: 28.1, z: 18.5}
   m_Children: []
@@ -80,16 +80,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6435509667025832080
-BoxCollider:
+--- !u!114 &266601435
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001636128767905574}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6604987, y: 0.12685722, z: 0.53750324}
-  m_Center: {x: -8.881784e-16, y: 0.000000007450581, z: 0.000000119209275}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2470f3f6c0a34504ab3ea3869e0d252b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
