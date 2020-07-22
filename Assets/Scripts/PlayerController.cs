@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float rotationRollFactor = 20f;
 
+    [SerializeField] GameObject[] guns;
+
     float horizontalThrow, verticalThrow;
 
     bool isPlayerDead = false;
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
         if (isPlayerDead) return;
         ProcessPlayerPosition();
         ProcessPlayerRotation();
+        ProcessFiring();
     }
 
     public void RemoveControl()
@@ -66,5 +69,33 @@ public class PlayerController : MonoBehaviour
         var clampRawYPosition = Mathf.Clamp(rawYPosition, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampRawXPosition, clampRawYPosition, transform.localPosition.z);
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (var gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (var gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 }
